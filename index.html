@@ -3,26 +3,42 @@
     <!-- Made for fun - https://github.com/jportela/ismyjavascripton -->
     <head>
         <title>Is my Javascript on?</title>
-        <meta charset="utf-8" />
-        <style type="text/css">
-            h1 {
-                text-align: center;
-            }
-            #content {
-                font-size: 2em;
-                text-align: center;
-            }
-        </style>
+        <meta charset="utf-8">
+        <meta name="description" content="This website checks if your Javascript is enabled or disabled. If it's enabled, it will give you a little something for being awesome.">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <script data-main="js/main" src="js/require.js"></script>
     </head>
     <body>
         <h1>Is my Javascript on?</h1>
-        <p id="content">
-        <noscript>
-            No...
-        </noscript>
+        <p id="main-content">
+            <noscript>
+                No...
+            </noscript>
         </p>
+
+        <div id="main-sandbox">
+            This is the playground area.
+        </div>
+
+        <p id="main-description">
+            This is the goodie description area.
+        </p>
+
+        <div id="main-spinner-container">
+            <p>Thank you for being awesome!</p>
+            <!-- Spinner gif from https://github.com/sjhcockrell/spinners (MIT License) -->
+            <img alt="Loading..." src="img/spinner_48.gif" />
+            <p>Please wait while the Internet fetches you some Javascript goodness :)</p>
+            <p>PS: Under construction, feel free to contribute. </p>
+        </div>
+
         <script>
-            document.getElementById('content').innerHTML = 'Yes!';
+            document.getElementById('main-content').innerHTML = 'Yes!';
+            window.onload = function () {
+                document.getElementById('main-spinner-container').className = 'is-active';
+            };
+            window.IMJO = {};
+            window.IMJO.startTime = Date.now();
         </script>
     </body>
 </html>

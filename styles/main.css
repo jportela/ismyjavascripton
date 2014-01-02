@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+#main-content {
+    font-size: 2em;
+    text-align: center;
+}
+
+#main-spinner-container {
+    display: none;
+    text-align: center;
+    margin: 4em 0;
+}
+
+#main-sandbox.is-active, #main-spinner-container.is-active, #main-description.is-active {
+    display: block;
+}
+
+#main-sandbox, #main-description {
+    display: none;
+    text-align: center;
+}
+
+.is-big {
+    font-size: 3em;
+}
