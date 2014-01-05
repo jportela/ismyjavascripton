@@ -78,7 +78,7 @@ define(["config"], function (config) {
             spinner = document.createElement('div');
             spinner.className = 'spinner is-active';
             spinner.appendChild(spinnerImg);
-            spinner.appendChild(spinnerTex);
+            spinner.appendChild(spinnerText);
             document.body.appendChild(spinner);
         },
 
