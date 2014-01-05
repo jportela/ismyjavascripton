@@ -6,17 +6,15 @@
  */
 
 define(function () {
-	var numPrev, num;
+	var numPrev, num, _playground;
 
-	function calculateNext (playground) {
+	function calculateNext() {
 		var aux = num;
 		num = numPrev + num; 
 		numPrev = aux;
-		playground.innerHTML = '' + num;
+		_playground.innerHTML = '' + num;
 		
-		setTimeout(function () {
-			calculateNext(playground); 
-		}, num * 1000);
+		setTimeout(calculateNext, num * 1000);
 	}
 
     return {
@@ -26,9 +24,10 @@ define(function () {
     	},
 
         start: function (playground) {
+        	_playground = playground;
             playground.innerHTML = '' + num;
         
-        	calculateNext(playground);
+        	calculateNext();
         }
     };
 });

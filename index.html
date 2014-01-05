@@ -16,27 +16,8 @@
             </noscript>
         </p>
 
-        <div id="main-sandbox">
-            This is the playground area.
-        </div>
-
-        <p id="main-description">
-            This is the goodie description area.
-        </p>
-
-        <div id="main-spinner-container">
-            <p>Thank you for being awesome!</p>
-            <!-- Spinner gif from https://github.com/sjhcockrell/spinners (MIT License) -->
-            <img alt="Loading..." src="img/spinner_48.gif" />
-            <p>Please wait while the Internet fetches you some Javascript goodness :)</p>
-            <p>PS: Under construction, feel free to contribute. </p>
-        </div>
-
         <script>
             document.getElementById('main-content').innerHTML = 'Yes!';
-            window.onload = function () {
-                document.getElementById('main-spinner-container').className = 'is-active';
-            };
             window.IMJO = {};
             window.IMJO.startTime = Date.now();
         </script>
